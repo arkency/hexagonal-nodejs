@@ -1,3 +1,5 @@
-npm install -g nodemon
+To serve, use
 
-nodemon main.coffee
+```
+node runner.js
+```
