@@ -15,6 +15,11 @@ class HttpAdapter
   respond: (msg) =>
     @res.writeHead 200, {'Content-Type': 'text/json'}
     @res.end "#{msg}\n"
-
+  
+  respondJSON: (hash) =>
+    @respond JSON.stringify(hash)
+  
+  wrongRequest: (req, res) =>
+    @respond "Wrong request, 404, gtfo"
 
 module.exports = HttpAdapter
